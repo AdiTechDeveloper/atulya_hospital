@@ -38,7 +38,51 @@
                                     </a>
                                 </li>
 
-                                @endforeach
+                                <li>
+                                    <a href="#infrastructure">
+                                        <span>Infrastructure</span>
+                                        <span class="icon">
+                                            <i class="far fa-long-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#icu">
+                                        <span>ICU</span>
+                                        <span class="icon">
+                                            <i class="far fa-long-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#operation-theatre">
+                                        <span>Operation Theatre</span>
+                                        <span class="icon">
+                                            <i class="far fa-long-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#facilities">
+                                        <span>Facilities</span>
+                                        <span class="icon">
+                                            <i class="far fa-long-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="#medical-activities">
+                                        <span>Medical Activities</span>
+                                        <span class="icon">
+                                            <i class="far fa-long-arrow-right"></i>
+                                        </span>
+                                    </a>
+                                </li>
 
                             </ul>
 
@@ -46,7 +90,7 @@
 
 
                         <!-- Contact Card -->
-                        <div class="sidebar-widget-image wow fadeInUp"
+                        {{-- <div class="sidebar-widget-image wow fadeInUp"
                             data-wow-delay=".5s">
 
                             <img
@@ -74,7 +118,7 @@
 
                             </div>
 
-                        </div>
+                        </div> --}}
 
                     </div>
 
@@ -116,21 +160,249 @@
                                     <div class="service-img">
 
                                         <img
-                                            src="{{ asset($image) }}"
-                                            alt="{{ $category['name'] }}"
+                                            src="{{ asset('assets/img/inner/service-details/44.png') }}"
+                                            alt="Hospital"
                                         >
 
                                     </div>
 
                                 </div>
 
-                                @endforeach
+                                <!-- Image 2 -->
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/55.png') }}"
+                                            alt="Hospital"
+                                        >
+                                    </div>
+                                </div>
+
+                                <!-- Image 3 -->
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/66.png') }}"
+                                            alt="Hospital"
+                                        >
+                                    </div>
+                                </div>
 
                             </div>
 
                         </div>
 
-                        @endforeach
+
+                        <!-- =========================
+                            INFRASTRUCTURE
+                        ========================== -->
+
+                        <div id="infrastructure" class="gallery-category">
+
+                            <h4>
+                                Infrastructure
+                            </h4>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/11.png') }}"
+                                            alt="Infrastructure"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/22.png') }}"
+                                            alt="Infrastructure"
+                                        >
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                            ICU
+                        ========================== -->
+
+                        <div id="icu" class="gallery-category">
+
+                            <h4>
+                                ICU
+                            </h4>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/3.png') }}"
+                                            alt="ICU"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/4.png') }}"
+                                            alt="ICU"
+                                        >
+                                    </div>
+                                </div>
+
+                                {{-- <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            alt="ICU"
+                                        >
+                                    </div>
+                                </div> --}}
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                            OPERATION THEATRE
+                        ========================== -->
+
+                        <div id="operation-theatre" class="gallery-category">
+
+                            <h4>
+                                Operation Theatre
+                            </h4>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/1.png') }}"
+                                            alt="Operation Theatre"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/2.png') }}"
+                                            alt="Operation Theatre"
+                                        >
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =========================
+                            FACILITIES
+                        ========================== -->
+
+                        <div id="facilities" class="gallery-category">
+
+                            <h4>
+                                Facilities
+                            </h4>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/5.png') }}"
+                                            alt="Facilities"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/6.png') }}"
+                                            alt="Facilities"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/7.png') }}"
+                                            alt="Facilities"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/8.png') }}"
+                                            alt="Facilities"
+                                        >
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                       
+                        <!-- =========================
+                            MEDICAL ACTIVITIES
+                        ========================== -->
+
+                        <div id="medical-activities" class="gallery-category">
+
+                            <h4>
+                                Medical Activities
+                            </h4>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/101.png') }}"
+                                            alt="Medical Activities"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/102.png') }}"
+                                            alt="Medical Activities"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="service-img">
+                                        <img
+                                            src="{{ asset('assets/img/inner/service-details/103.png') }}"
+                                            alt="Medical Activities"
+                                        >
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
 
                     </div>
 

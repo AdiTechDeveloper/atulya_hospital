@@ -1014,12 +1014,12 @@
                                         </div>
                                         <div class="testimonial-content">
                                             <p>
-                                               “Dr. Dhaivat Shukla is an excellent doctor. I was suffering from Ankylosing Spondylitis, and he diagnosed my condition quickly and started effective treatment. He is very supportive, helpful, and caring towards his patients. I am very satisfied with his treatment and would highly recommend him.”
+                                               "We visited Atulya Hospital for my son’s earache, and our experience with Dr. Vaidik Chauhan was truly excellent. From the very first interaction, he was extremely polite, friendly, and reassuring. He explained everything clearly and guided us with great care and patience.''
                                             </p>
                                             <div class="info-item">
                                                 <div class="info-content">
                                                     <h5>
-                                                        Shivani Joshi</h5>
+                                                        Khushbu Panchal</h5>
 
                                                 </div>
                                                 <div class="icon">
@@ -1049,6 +1049,36 @@
                                                 <div class="info-content">
                                                     <h5>
                                                         Husain Bhatia
+                                                    </h5>
+
+                                                </div>
+                                                <div class="icon">
+                                                    <img src="{{ asset('assets/img/home-5/testimonial/01.svg') }}" alt="img">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box-item-1">
+                                        <div class="client-image">
+
+                                            <div class="star">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial-content">
+                                            <p>
+                                              I had my piles operation today and I am very happy with the treatment. The doctors Dr. Krunal Sathwara and staff were very caring, supportive, and professional. The hospital is clean and well-maintained. Thank you for the excellent care.
+                                            </p>
+                                            <div class="info-item">
+                                                <div class="info-content">
+                                                    <h5>
+                                                        Dharmesh Kadia
                                                     </h5>
 
                                                 </div>
