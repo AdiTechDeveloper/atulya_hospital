@@ -23,6 +23,7 @@ class DepartmentController extends Controller
 
        
 
-        return view('website.pages.show', compact('department'));
+        return view('website.pages.department
+        ', compact('department'));
     }
 }

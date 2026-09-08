@@ -29,3 +29,4 @@
 
 <!--<< Doctor Profile.css >>-->
 <link rel="stylesheet" href="{{ asset('assets/css/doctor-profile.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/icu-emergency.css') }}">

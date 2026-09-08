@@ -22,68 +22,23 @@
 
                             <ul class="wow fadeInUp" data-wow-delay=".3s">
 
+                                @foreach($gallery['categories'] as $category)
+
                                 <li>
-                                    <a href="#hospital">
-                                        <span>Hospital</span>
+                                    <a href="#{{ $category['slug'] }}">
+
+                                        <span>
+                                            {{ $category['name'] }}
+                                        </span>
+
                                         <span class="icon">
                                             <i class="far fa-long-arrow-right"></i>
                                         </span>
+
                                     </a>
                                 </li>
 
-                                <li>
-                                    <a href="#infrastructure">
-                                        <span>Infrastructure</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#icu">
-                                        <span>ICU</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#operation-theatre">
-                                        <span>Operation Theatre</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#facilities">
-                                        <span>Facilities</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#events">
-                                        <span>Events</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="#medical-activities">
-                                        <span>Medical Activities</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
+                                @endforeach
 
                             </ul>
 
@@ -106,14 +61,14 @@
                                 </div>
 
                                 <h3>
-                                    <a href="tel:+916355258425">
-                                        +91 63552 58425
+                                    <a href="tel:+919727579000">
+                                        +91 97275 79000
                                     </a>
                                 </h3>
 
                                 <h3>
-                                    <a href="mailto:info@example.com" class="link">
-                                        info@example.com
+                                    <a href="#" class="link">
+                                       
                                     </a>
                                 </h3>
 
@@ -132,299 +87,50 @@
                     <div class="service-details-right-items">
 
                         <h3>
-                            Photo & Video Gallery
+                            {{ $gallery['title'] ?? 'Photo & Video Gallery' }}
                         </h3>
 
                         <p>
-                            Explore our hospital through photos and videos
-                            showcasing our infrastructure, facilities,
-                            medical activities, events and patient-care
-                            environment.
+                            {{ $gallery['description'] ?? 'Explore our hospital through photos and videos showcasing our infrastructure, facilities, medical activities, events and patient-care environment.' }}
                         </p>
 
 
                         <!-- =========================
-                            HOSPITAL
+                            GALLERY CATEGORIES
                         ========================== -->
 
-                        <div id="hospital" class="gallery-category">
+                        @foreach($gallery['categories'] as $category)
+
+                        <div id="{{ $category['slug'] }}" class="gallery-category">
 
                             <h4>
-                                Hospital
+                                {{ $category['name'] }}
                             </h4>
 
                             <div class="row g-3">
 
-                                <!-- Image 1 -->
+                                @foreach($category['images'] as $image)
+
                                 <div class="col-md-6">
+
                                     <div class="service-img">
+
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Hospital"
+                                            src="{{ asset($image) }}"
+                                            alt="{{ $category['name'] }}"
                                         >
+
                                     </div>
+
                                 </div>
 
-                                <!-- Image 2 -->
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Hospital"
-                                        >
-                                    </div>
-                                </div>
-
-                                <!-- Image 3 -->
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Hospital"
-                                        >
-                                    </div>
-                                </div>
+                                @endforeach
 
                             </div>
 
                         </div>
 
-
-                        <!-- =========================
-                            INFRASTRUCTURE
-                        ========================== -->
-
-                        <div id="infrastructure" class="gallery-category">
-
-                            <h4>
-                                Infrastructure
-                            </h4>
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Infrastructure"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Infrastructure"
-                                        >
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- =========================
-                            ICU
-                        ========================== -->
-
-                        <div id="icu" class="gallery-category">
-
-                            <h4>
-                                ICU
-                            </h4>
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="ICU"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="ICU"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="ICU"
-                                        >
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- =========================
-                            OPERATION THEATRE
-                        ========================== -->
-
-                        <div id="operation-theatre" class="gallery-category">
-
-                            <h4>
-                                Operation Theatre
-                            </h4>
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Operation Theatre"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Operation Theatre"
-                                        >
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- =========================
-                            FACILITIES
-                        ========================== -->
-
-                        <div id="facilities" class="gallery-category">
-
-                            <h4>
-                                Facilities
-                            </h4>
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Facilities"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Facilities"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Facilities"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Facilities"
-                                        >
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- =========================
-                            EVENTS
-                        ========================== -->
-
-                        <div id="events" class="gallery-category">
-
-                            <h4>
-                                Events
-                            </h4>
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Events"
-                                        >
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- =========================
-                            MEDICAL ACTIVITIES
-                        ========================== -->
-
-                        <div id="medical-activities" class="gallery-category">
-
-                            <h4>
-                                Medical Activities
-                            </h4>
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Medical Activities"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Medical Activities"
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Medical Activities"
-                                        >
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
+                        @endforeach
 
                     </div>
 

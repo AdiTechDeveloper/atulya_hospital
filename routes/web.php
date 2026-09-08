@@ -4,6 +4,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\website\GalleryController;
 use App\Http\Controllers\website\DepartmentController;
 use App\Http\Controllers\Website\FacilityController;
 use Illuminate\Support\Facades\Route;
@@ -82,3 +83,6 @@ Route::get('/doctors', [DoctorController::class, 'index'])
 
 Route::get('/doctors/{slug}', [DoctorController::class, 'show'])
     ->name('doctors.show');
+
+    Route::get('/gallery', [GalleryController::class, 'index'])
+    ->name('gallery.index');

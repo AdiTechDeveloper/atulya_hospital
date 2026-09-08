@@ -4,303 +4,412 @@
 
 @section('content')
 
-<section class="service-details-section section-padding pt-80 pb-80">
+<link rel="stylesheet" href="{{ asset('assets/css/icu-emergency.css') }}">
+
+<section class="icu-emergency-section">
 
     <div class="container">
 
-        <div class="service-details-wrapper">
+        {{-- =========================
+            PAGE INTRO
+        ========================== --}}
+        <div class="icu-intro text-center">
 
-            <div class="row g-4">
+            <span class="icu-badge">
+                24×7 CRITICAL CARE
+            </span>
 
-                <!-- LEFT SIDEBAR -->
-                <div class="col-lg-4 order-2 order-xl-1">
+            <h1>
+                ICU & Emergency
+            </h1>
 
-                    <div class="service-details-sidebar sticky-style">
+            <p>
+                Our dedicated ICU & Emergency services provide
+                round-the-clock critical care and emergency support
+                for patients requiring immediate medical attention,
+                intensive monitoring and specialized care.
+            </p>
 
-                        <!-- Emergency Services List -->
-                        <div class="sidebar-widget">
+        </div>
 
-                            <ul class="wow fadeInUp" data-wow-delay=".3s">
 
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <span>24×7 Emergency Services</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
+        {{-- =========================
+            MAIN IMAGE
+        ========================== --}}
+        <div class="icu-main-image">
 
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <span>24×7 Critical Care</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
+            <img
+                src="{{ asset('assets/img/inner/facilities/emergency.jpg') }}"
+                alt="ICU & Emergency"
+            >
 
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <span>6-Bed ICU</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
+        </div>
 
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <span>ICU with Dialysis</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
 
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <span>Central Oxygen Facility</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
+        {{-- =========================
+            SERVICES HEADING
+        ========================== --}}
+        <div class="icu-services-heading text-center">
 
-                                <li>
-                                    <a href="javascript:void(0);">
-                                        <span>Ambulance Services</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
+            <span class="icu-badge">
+                OUR SERVICES
+            </span>
 
-                            </ul>
+            <h2>
+                Comprehensive Emergency & Critical Care
+            </h2>
 
+            <p>
+                We are equipped to handle medical emergencies and critical
+                conditions with advanced facilities and an experienced
+                medical team.
+            </p>
+
+        </div>
+
+
+        {{-- =========================
+            SERVICE CARDS
+        ========================== --}}
+        <div class="row g-4">
+
+
+            {{-- Emergency --}}
+            <div class="col-lg-6">
+
+                <div class="icu-service-card h-100">
+
+                    <div class="icu-card-header">
+
+                        <div class="icu-card-icon emergency-icon">
+                            <i class="fas fa-ambulance"></i>
                         </div>
 
+                        <div>
+                            <span class="icu-small-title">
+                                EMERGENCY CARE
+                            </span>
 
-                        <!-- Emergency Contact -->
-                        <div class="sidebar-widget-image wow fadeInUp"
-                            data-wow-delay=".5s">
+                            <h3>
+                                24×7 Emergency Services
+                            </h3>
+                        </div>
 
-                            <img
-                                src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                alt="ICU & Emergency"
-                            >
+                    </div>
 
-                            <div class="content">
+                    <p>
+                        Our emergency department is available 24×7 to
+                        provide prompt medical assessment and immediate
+                        support during urgent and emergency situations.
+                        Our medical team focuses on timely evaluation,
+                        stabilization and appropriate treatment.
+                    </p>
 
-                                <div class="icon">
-                                    <i class="flaticon-support"></i>
-                                </div>
+                    <div class="icu-points">
 
-                                <h3>
-                                    <a href="javascript:void(0);">
-                                        +91 97275 79000
-                                    </a>
-                                </h3>
+                        <div>
+                            <i class="far fa-check"></i>
+                            24×7 Emergency Services
+                        </div>
 
-                                <h3>
-                                    <span class="link">
-                                        Emergency Contact
-                                    </span>
-                                </h3>
+                        <div>
+                            <i class="far fa-check"></i>
+                            Critical Emergency Care
+                        </div>
 
-                            </div>
+                        <div>
+                            <i class="far fa-check"></i>
+                            Immediate Medical Assistance
+                        </div>
 
+                        <div>
+                            <i class="far fa-check"></i>
+                            Continuous Medical Support
+                        </div>
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            Emergency Patient Assessment
+                        </div>
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            Ambulance Support
                         </div>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- RIGHT CONTENT -->
-                <div class="col-lg-8 order-1 order-xl-2">
 
-                    <div class="service-details-right-items"
-                        style="padding-bottom: 10px;">
+            {{-- Critical Care --}}
+            <div class="col-lg-6">
 
-                        <!-- Main Image -->
-                        <div class="service-img wow img-custom-anim-left">
+                <div class="icu-service-card h-100">
 
-                            <img
-                                src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                alt="ICU & Emergency"
-                            >
+                    <div class="icu-card-header">
 
+                        <div class="icu-card-icon critical-icon">
+                            <i class="fas fa-heartbeat"></i>
                         </div>
 
+                        <div>
+                            <span class="icu-small-title">
+                                INTENSIVE CARE
+                            </span>
 
-                        <!-- Title -->
-                        <h3>
-                            ICU & Emergency
-                        </h3>
-
-
-                        <!-- Introduction -->
-                        <p>
-                            Our dedicated ICU & Emergency services provide
-                            round-the-clock critical care and emergency support
-                            with immediate medical attention for patients
-                            requiring urgent and intensive care.
-                        </p>
-
-
-                        <!-- Emergency Services -->
-                        <h4 style="margin-top: 24px; margin-bottom: 10px;">
-                            Emergency Services
-                        </h4>
-
-                        <p>
-                            Our emergency department is available 24×7 to
-                            provide prompt medical assistance and critical
-                            emergency care whenever required.
-                        </p>
-
-
-                        <div class="list-box">
-
-                            <ul>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    24×7 Emergency Services
-                                </li>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    24×7 Critical Care
-                                </li>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    6-Bed ICU
-                                </li>
-
-                            </ul>
-
-
-                            <ul>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    ICU with Dialysis
-                                </li>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    Central Oxygen Facility
-                                </li>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    Ambulance Services
-                                </li>
-
-                            </ul>
-
+                            <h3>
+                                Advanced Critical Care
+                            </h3>
                         </div>
 
+                    </div>
 
-                        <!-- Critical Care -->
-                        <h4 style="margin-top: 24px; margin-bottom: 10px;">
-                            Critical Care
-                        </h4>
+                    <p>
+                        Our critical care unit provides dedicated medical
+                        support for patients requiring continuous observation,
+                        intensive monitoring and specialized treatment.
+                        The ICU is supported by critical care physicians,
+                        trained nursing staff and essential medical infrastructure.
+                    </p>
 
-                        <p>
-                            Our ICU is supported by critical care physicians
-                            and essential facilities for patients requiring
-                            continuous monitoring and intensive medical care.
-                        </p>
+                    <div class="icu-points">
 
-
-                        <div class="list-box">
-
-                            <ul>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    6-Bed ICU
-                                </li>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    ICU with Dialysis
-                                </li>
-
-                            </ul>
-
-                            <ul>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    Central Oxygen Facility
-                                </li>
-
-                                <li>
-                                    <i class="far fa-check"></i>
-                                    Critical Care Physicians
-                                </li>
-
-                            </ul>
-
+                        <div>
+                            <i class="far fa-check"></i>
+                            6-Bed Intensive Care Unit
                         </div>
 
-
-                        <!-- Ambulance -->
-                        <h4 style="margin-top: 24px; margin-bottom: 10px;">
-                            Ambulance Services
-                        </h4>
-
-                        <p>
-                            Ambulance services are available for emergency
-                            transportation and timely medical assistance.
-                        </p>
-
-
-                        <!-- Emergency CTA -->
-                        <div class="mt-3">
-
-                            <button
-                                type="button"
-                                class="theme-btn"
-                                disabled
-                                style="opacity: 0.65; cursor: not-allowed;"
-                            >
-
-                                <i class="far fa-phone"></i>
-
-                                Emergency: +91 97275 79000
-
-                            </button>
-
+                        <div>
+                            <i class="far fa-check"></i>
+                            Critical Care Physicians
                         </div>
 
+                        <div>
+                            <i class="far fa-check"></i>
+                            24×7 Critical Care
+                        </div>
 
-                        <!-- Appointment CTA -->
-                        <div class="mt-3">
+                        <div>
+                            <i class="far fa-check"></i>
+                            Dedicated Nursing Support
+                        </div>
 
-                            <button
-                                type="button"
-                                class="theme-btn"
-                                disabled
-                                style="opacity: 0.65; cursor: not-allowed;"
-                            >
+                        <div>
+                            <i class="far fa-check"></i>
+                            Continuous Patient Monitoring
+                        </div>
 
-                                <i class="far fa-chevron-right"></i>
-
-                                Emergency & Appointment
-
-                            </button>
-
+                        <div>
+                            <i class="far fa-check"></i>
+                            Intensive Medical Supervision
                         </div>
 
                     </div>
 
                 </div>
+
+            </div>
+
+
+            {{-- Dialysis --}}
+            <div class="col-lg-6">
+
+                <div class="icu-service-card h-100">
+
+                    <div class="icu-card-header">
+
+                        <div class="icu-card-icon dialysis-icon">
+                            <i class="fas fa-procedures"></i>
+                        </div>
+
+                        <div>
+                            <span class="icu-small-title">
+                                SPECIALIZED SUPPORT
+                            </span>
+
+                            <h3>
+                                ICU With Dialysis Support
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Dialysis support is available for patients who
+                        require renal care while undergoing intensive
+                        treatment. This helps provide critical and renal
+                        care within the hospital when clinically required.
+                    </p>
+
+                    <div class="icu-points">
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            Dialysis Support
+                        </div>
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            Renal Care Assistance
+                        </div>
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            ICU Patient Support
+                        </div>
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            Continuous Monitoring
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            {{-- Oxygen --}}
+            <div class="col-lg-6">
+
+                <div class="icu-service-card h-100">
+
+                    <div class="icu-card-header">
+
+                        <div class="icu-card-icon oxygen-icon">
+                            <i class="fas fa-lungs"></i>
+                        </div>
+
+                        <div>
+                            <span class="icu-small-title">
+                                HOSPITAL FACILITY
+                            </span>
+
+                            <h3>
+                                Central Oxygen Facility
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        The hospital is supported by a centralized oxygen
+                        supply system to provide dependable oxygen availability
+                        for patients requiring respiratory support across
+                        emergency, ICU and inpatient care.
+                    </p>
+
+                    <div class="icu-points">
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            Centralized Oxygen Supply
+                        </div>
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            Emergency Respiratory Support
+                        </div>
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            ICU Oxygen Availability
+                        </div>
+
+                        <div>
+                            <i class="far fa-check"></i>
+                            Inpatient Support
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            {{-- Ambulance --}}
+            <div class="col-12">
+
+                <div class="icu-service-card icu-wide-card">
+
+                    <div class="icu-card-header">
+
+                        <div class="icu-card-icon ambulance-icon">
+                            <i class="fas fa-ambulance"></i>
+                        </div>
+
+                        <div>
+                            <span class="icu-small-title">
+                                24×7 TRANSPORT SUPPORT
+                            </span>
+
+                            <h3>
+                                24×7 Ambulance Services
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Ambulance support is available for emergency
+                        transportation and timely patient transfer.
+                        Patients and family members can contact the hospital
+                        directly whenever urgent medical transportation
+                        assistance is required.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        {{-- =========================
+            EMERGENCY CTA
+        ========================== --}}
+        <div class="icu-emergency-cta">
+
+            <div class="icu-cta-icon">
+                <i class="fas fa-phone-alt"></i>
+            </div>
+
+            <div class="icu-cta-content">
+
+                <span class="icu-small-title">
+                    EMERGENCY SUPPORT
+                </span>
+
+                <h2>
+                    Need Emergency Assistance?
+                </h2>
+
+                <p>
+                    For emergency medical assistance, ICU enquiries
+                    or ambulance support, contact Atulya Super
+                    Speciality Hospital & ICU.
+                </p>
+
+            </div>
+
+            <div class="icu-cta-action">
+
+                <a
+                    href="tel:+919727579000"
+                    class="theme-btn"
+                >
+                    <i class="fas fa-phone-alt"></i>
+                    +91 97275 79000
+                </a>
+
+                <span>
+                    AVAILABLE 24×7
+                </span>
 
             </div>
 
