@@ -71,7 +71,7 @@
     <ul class="top-list"> 
 
         <li> 
-            <i class="fal fa-phone"></i> 
+            <i class="fas fa-phone"></i> 
             <a href="tel:+919727579000"> 
                 +91 97275 79000
             </a> 
@@ -103,7 +103,7 @@
             <div class="header-main">
                 <div class="header-left">
                         <a href="{{ url('/') }}" class="header-logo1">
-                        <img width="150px" src="{{ asset('assets/img/logo/Atulya-logo.png') }}" alt="logo-img">
+                        <img width="220px" src="{{ asset('assets/img/logo/Atulya-logo.png') }}" alt="logo-img">
                     </a>
                 </div>
                 <div class="header-right d-flex justify-content-end align-items-center">
@@ -173,7 +173,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                            <a href="{{ route('doctors.index') }}">
+                                            <a href="{{ url('/doctors') }}">
                                                     Our Doctor's
                                                 </a>
                                             </li>
@@ -307,7 +307,7 @@
                             </div>
                             <div class="content">
                                 <span>Call Emergency</span>
-                                <h6><a href="#">91 97275 79000 </a></h6>
+                                <h6><a href="tel:+919727579000">91 97275 79000 </a></h6>
                             </div>
                         </div>
                         <a href="{{ url('/contact') }}" class="theme-btn">

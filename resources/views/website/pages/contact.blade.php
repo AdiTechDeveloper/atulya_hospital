@@ -281,8 +281,7 @@
                     <div class="content">
 
                         <h6>Our Location</h6>
-                        Bhuyangdev,
-                        Ahmedabad
+                      Atulya Superspeciality Hospital & ICU, 206–214, 2nd Floor, Elite Magnum, Bhuyangdev Cross Road, Ahmedabad – 380061, Gujarat
 
                     </div>
 
@@ -320,7 +319,6 @@
     </div>
 
 </div>
-<!-- Map Section End -->
-```
+
 
 @endsection

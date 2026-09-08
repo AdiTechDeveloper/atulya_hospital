@@ -5,7 +5,7 @@
 
 <!-- Hero Section Start -->
 
-<section class="hero-section hero-1 bg-cover fix" style="background-image: url('assets/img/home-1/hero/bg-01.jpg');">
+<section class="hero-section hero-1 bg-cover fix" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/home-1/hero/bg-01.png'); height:900px;">
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-lg-6">
@@ -14,7 +14,7 @@
                         Compassionate <br> Care For Better Health
                     </h1>
 
-                    <p class="wow fadeInUp" data-wow-delay=".3s">
+                    <p class="wow fadeInUp text-white" data-wow-delay=".3s">
                         At Atulya Hospital, we combine advanced medical expertise,
                         modern technology and compassionate care to provide
                         comprehensive healthcare for you and your family.
@@ -27,16 +27,16 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+            {{-- <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                 <div class="hero-image">
                     <img src="{{ asset('assets/img/home-1/hero/1.png') }}" alt="Atulya Hospital">
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
 
-<div class="hero-feature">
+<div class="hero-feature" style="margin-top:44px;">
     <div class="container">
         <div class="hero-feature-wrapper">
             <div class="row">
@@ -57,7 +57,7 @@
                     <div class="hero-feature-icon ps-0">
                         <div class="icon justify-content-between">
                             <img src="{{ asset('assets/img/home-1/hero/feature-2.png') }}" alt="Doctors">
-                            <a  href="{{ url('/doctor') }}"class="arrow-icon">
+                            <a  href="{{ url('/doctors') }}"class="arrow-icon">
                                 <i class="far fa-chevron-right"></i>
                             </a>
                         </div>
@@ -74,7 +74,7 @@
                                     Emergency Helpline
                                 </p>
                                 <h4>
-                                    <a href="tel:+910000000000">+91 97275 79000</a>
+                                    <a href="tel:+919727579000">+91 97275 79000</a>
                                 </h4>
                             </div>
                         </div>
@@ -117,10 +117,10 @@
                                 alt="Atulya Hospital Healthcare">
                         </div>
 
-                        <div class="about-img-3 float-bob-y">
+                        {{-- <div class="about-img-3 float-bob-y">
                             <img width="264" height="305" src="{{ asset('assets/img/home-1/about/portrait-female-pediatrician-work.jpg') }}"
                                 alt="Atulya Hospital Doctors">
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -256,13 +256,13 @@
 
                         <li class="nav-item wow fadeInUp" data-wow-delay=".2s">
                             <a href="#thumb1" data-bs-toggle="tab" class="nav-link active">
-                                Orthopaedics <i class="far fa-chevron-right"></i>
+                                Orthopedics <i class="far fa-chevron-right"></i>
                             </a>
                         </li>
 
                         <li class="nav-item wow fadeInUp" data-wow-delay=".4s">
                             <a href="#thumb2" data-bs-toggle="tab" class="nav-link">
-                                Joint Replacement <i class="far fa-chevron-right"></i>
+                                UROLOGY <i class="far fa-chevron-right"></i>
                             </a>
                         </li>
 
@@ -274,7 +274,7 @@
 
                         <li class="nav-item wow fadeInUp" data-wow-delay=".8s">
                             <a href="#thumb4" data-bs-toggle="tab" class="nav-link">
-                                Skin & Cosmetics <i class="far fa-chevron-right"></i>
+                                General Surgery <i class="far fa-chevron-right"></i>
                             </a>
                         </li>
 
@@ -297,8 +297,8 @@
                                     </div>
 
                                     <h3>
-                                        <a href="{{ url('/departments/orthopaedics') }}">
-                                            Advanced Orthopaedic <br>
+                                        <a href="{{ url('/departments/orthopedic') }}">
+                                            Advanced Orthopedics <br>
                                             Care & Treatment
                                         </a>
                                     </h3>
@@ -309,7 +309,7 @@
                                         improve their quality of life.
                                     </p>
 
-                                    <a href="{{ url('/departments/orthopaedics') }}" class="theme-btn mt-5">
+                                    <a href="{{ url('/departments/orthopedic') }}" class="theme-btn mt-5">
                                         <i class="far fa-chevron-right"></i>
                                         More Details
                                     </a>
@@ -317,7 +317,7 @@
                                 </div>
 
                                 <div class="service-image">
-                                    <img src="{{ asset('assets/img/home-1/service/service.png') }}"
+                                    <img src="{{ asset('assets/img/home-1/service/service2.png') }}"
                                         alt="Orthopaedic Care">
 
 
@@ -338,19 +338,17 @@
                                     </div>
 
                                     <h3>
-                                        <a href="{{ url('/departments/joint-replacement') }}">
-                                            Joint Replacement <br>
-                                            & Mobility Care
+                                        <a href="{{ url('departments/urology') }}">
+                                            Urology <br>
+                                            
                                         </a>
                                     </h3>
 
                                     <p>
-                                        Specialised care for patients with joint problems, with a focus
-                                        on pain management, treatment and improved movement for a better
-                                        quality of life.
+                                        Comprehensive care for urinary tract and male reproductive health, including diagnosis and treatment of urological conditions.
                                     </p>
 
-                                    <a href="{{ url('/departments/joint-replacement') }}" class="theme-btn mt-5">
+                                    <a href="{{ url('departments/urology') }}" class="theme-btn mt-5">
                                         <i class="far fa-chevron-right"></i>
                                         More Details
                                     </a>
@@ -358,7 +356,7 @@
                                 </div>
 
                                 <div class="service-image">
-                                    <img src="{{ asset('assets/img/home-1/service/service.png') }}"
+                                    <img src="{{ asset('assets/img/home-1/service/darshil_shah.png') }}"
                                         alt="Joint Replacement Care">
 
 
@@ -399,7 +397,7 @@
                                 </div>
 
                                 <div class="service-image">
-                                    <img img src="{{ asset('assets/img/home-1/service/service.png') }}"
+                                    <img img src="{{ asset('assets/img/home-1/service/vaidik_chauhan.png') }}"
                                         alt="ENT Care">
 
 
@@ -420,19 +418,17 @@
                                     </div>
 
                                     <h3>
-                                        <a href="{{ url('/departments/skin-cosmetics') }}">
-                                            Skin & Cosmetic <br>
-                                            Care Services
+                                        <a href="{{ url('/departments/onco-surgery') }}">
+                                             General Surgery <br>
+                                            
                                         </a>
                                     </h3>
 
                                     <p>
-                                        Professional dermatology and cosmetic care designed to address
-                                        a wide range of skin concerns with personalised treatment and
-                                        patient-focused care.
+                                      Expert surgical care for a wide range of conditions, with a focus on safe, effective, and minimally invasive procedures.
                                     </p>
 
-                                    <a href="{{ url('/departments/skin-cosmetics') }}" class="theme-btn mt-5">
+                                    <a href="{{ url('/departments/onco-surgery') }}" class="theme-btn mt-5">
                                         <i class="far fa-chevron-right"></i>
                                         More Details
                                     </a>
@@ -440,7 +436,7 @@
                                 </div>
 
                                 <div class="service-image">
-                                    <img src="{{ asset('assets/img/home-1/service/service.png') }}"
+                                    <img src="{{ asset('assets/img/home-1/service/kunal_sathwara.png') }}"
                                         alt="Skin and Cosmetic Care">
 
 
@@ -476,7 +472,7 @@
 
         <!-- CTA -->
         <div class="cta-wrapper zoom-effect-style bg-cover"
-            style="background-image: linear-gradient(rgba(255,255,255,0.20), rgba(255,255,255,0.82)), url('{{ asset('assets/img/home-1/cta/bg-image.png') }}');">
+            style="background-image:  url('{{ asset('assets/img/home-1/cta/bg-image.png') }}');">
 
 
 
@@ -488,7 +484,7 @@
                         MEET OUR SPECIALISTS
                     </span>
 
-                    <h2 class="tx-title sec_title tz-itm-title tz-itm-anim">
+                    <h2 class="tx-title text-white sec_title tz-itm-title tz-itm-anim">
                         Expert Doctors, Compassionate <br>
                         Care For Your Better Health
                     </h2>
@@ -635,7 +631,7 @@
 
 
 <!-- Video Section Start -->
-<div class="vedio-bg-section fix bg-cover" style="background-image: url(assets/img/home-1/counter/video-img.jpg);">
+<div class="vedio-bg-section fix bg-cover" style="background-image: url(assets/img/home-1/counter/video-img.png);">
     <div class="counter-section">
         <div class="container">
             <div class="counter-wrapper zoom-effect-style">
@@ -678,13 +674,27 @@
             </div>
         </div>
     </div>
-    <div class="vedio-wrapper">
-        <div class="video">
-            <a href="#" class="video-btn ripple video-popup">
-                <i class="fas fa-play"></i>
-            </a>
-        </div>
+  <div class="vedio-wrapper">
+    <div class="video">
+        <a href="javascript:void(0);" class="video-btn ripple" id="openVideo">
+            <i class="fas fa-play"></i>
+        </a>
     </div>
+</div>
+
+<!-- Video Popup -->
+<div id="videoModal" class="video-modal">
+    <div class="video-modal-content">
+
+        <span class="video-close" id="closeVideo">&times;</span>
+
+        <video id="popupVideo" controls>
+            <source src="{{ asset('assets/img/home-1/counter/video.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+    </div>
+</div>
 </div>
 
 
@@ -859,7 +869,7 @@
                 </div>
                 <div class="col-lg-4 wow fadeInUp" data-wow-delay=".5s">
                     <div class="appointment-image">
-                        <img src="{{ asset('assets/img/home-1/appointemnt.png') }}" alt="img">
+                        <img src="{{ asset('assets/img/home-1/appointment.jpg') }}" alt="img">
                     </div>
                 </div>
             </div>
@@ -1099,7 +1109,7 @@
 </div>
 
 <!-- News Section Start -->
-<section class="news-section section-padding fix pt-0">
+{{-- <section class="news-section section-padding fix pt-0">
     <div class="news-shape-1">
         <img src="{{ asset('assets/img/home-1/news/shape-01.png') }}" alt="img">
     </div>
@@ -1159,7 +1169,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 <!-- Faq Section Start -->
 
@@ -1351,5 +1361,94 @@
 
 </section>
 <!-- Faq Section End -->
+<script>
+   
+    const openVideo = document.getElementById("openVideo");
+    const closeVideo = document.getElementById("closeVideo");
+    const videoModal = document.getElementById("videoModal");
+    const popupVideo = document.getElementById("popupVideo");
 
+    // Open popup
+    openVideo.addEventListener("click", function () {
+        videoModal.style.display = "flex";
+        popupVideo.currentTime = 0;
+        popupVideo.play();
+    });
+
+    // Close popup
+    closeVideo.addEventListener("click", function () {
+        videoModal.style.display = "none";
+        popupVideo.pause();
+        popupVideo.currentTime = 0;
+    });
+
+    // Close when clicking outside video
+    videoModal.addEventListener("click", function (e) {
+        if (e.target === videoModal) {
+            videoModal.style.display = "none";
+            popupVideo.pause();
+            popupVideo.currentTime = 0;
+        }
+    });
+</script>
+<style>
+    /* Video Popup */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.video-modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.video-modal-content video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.video-close {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+
+    cursor: pointer;
+    z-index: 100000;
+}
+
+.video-close:hover {
+    color: #ddd;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .video-modal-content {
+        width: 92%;
+    }
+
+    .video-close {
+        right: 0;
+        top: -45px;
+        font-size: 35px;
+    }
+}
+</style>
 @endsection

@@ -2883,7 +2883,7 @@ button {
 }
 
 .hero-1 .hero-content {
-  margin-bottom: 170px;
+  margin-top: 196px;
 }
 
 @media (max-width: 991px) {
@@ -2899,7 +2899,7 @@ button {
 }
 
 .hero-1 .hero-content h1 {
-  color: #172965;
+  color: #02c9b8;
 }
 
 @media (max-width: 575px) {
@@ -15535,13 +15535,16 @@ p.sticky-label {
   background: var(--white);
   -webkit-box-shadow: 14px 18px 84px 82px rgba(6, 3, 48, 0.03);
           box-shadow: 14px 18px 84px 82px rgba(6, 3, 48, 0.03);
-  padding: 38px 32px;
+  /* padding: 38px 32px; */
+  padding: 22px 14px;
+  height: 155px;
 }
 
 .contact-info-box-items .icon {
-  width: 78px;
-  height: 78px;
-  line-height: 78px;
+  width: 50px;
+  height: 50px;
+  /* line-height: 50px; */
+  padding: 11px 15px;
   border-radius: 50%;
   text-align: center;
   background-color: var(--theme-color);
