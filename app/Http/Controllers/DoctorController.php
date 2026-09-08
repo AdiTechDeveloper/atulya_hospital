@@ -37,6 +37,9 @@ class DoctorController extends Controller
             abort(404);
         }
 
-        return view('website.pages.doctor-profile', compact('doctor'));
+        return view(
+            'website.pages.doctor-profile',
+            compact('doctor')
+        );
     }
 }

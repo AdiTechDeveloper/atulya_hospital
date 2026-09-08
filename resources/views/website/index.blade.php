@@ -516,180 +516,91 @@
         </div>
 
 
-        <!-- Doctors -->
-        <div class="row g-4 section-padding pb-0 advance-wrap">
+     <!-- Doctors -->
+<!-- Doctors -->
+<div class="row g-4 section-padding pb-0 advance-wrap">
 
-            <!-- Doctor 1 -->
-            <div class="col-xl-3 col-lg-4 col-md-6">
+    @foreach($doctors as $doctor)
 
-                <div class="team-box-items mt-0 advance-item h-100">
+        <div class="col-xl-3 col-lg-4 col-md-6">
 
-                    <div class="team-image">
+            <div class="team-box-items mt-0 advance-item h-100 d-flex flex-column">
 
-                        <img src="{{ asset('assets/img/home-1/team/doctor-1.png') }}"
-                            alt="Dr. Rahul Sharma - Cardiologist">
+                <!-- Doctor Image -->
+                <div class="team-image">
 
-                        <span class="post-box">
-                            Cardiologist
+                    <img
+                        src="{{ asset($doctor['image']) }}"
+                        alt="{{ $doctor['name'] }}"
+                    >
+
+                    <span class="post-box">
+                        {{ $doctor['department'] }}
+                    </span>
+
+                </div>
+
+                <!-- Doctor Content -->
+                <div class="team-content d-flex flex-column flex-grow-1">
+
+                    <!-- Doctor Name -->
+                    <div style="height: 35px; overflow: hidden;">
+
+                        <h3 class="mb-0">
+                            <a href="{{ route('doctors.show', $doctor['slug']) }}">
+                                {{ $doctor['name'] }}
+                            </a>
+                        </h3>
+
+                    </div>
+
+
+                    <!-- Appointment -->
+                    <div
+                        class="phone-box"
+                        style="height: 45px;"
+                    >
+
+                        <i class="fas fa-phone-alt"></i>
+
+                        <span>
+                            <b>Appointment</b> :
+
+                            <a href="tel:+919727579000">
+                                +91 97275 79000
+                            </a>
                         </span>
 
                     </div>
 
-                    <div class="team-content">
 
-                        <h3>
-                            <a href="#">Dr. Rahul Sharma</a>
-                        </h3>
+                    <!-- Specialization -->
+                    <div
+                        style="
+                            height: 65px;
+                            overflow: hidden;
+                        "
+                    >
 
-                        <div class="phone-box">
-                            <i class="fas fa-phone-alt"></i>
-
-                            <span>
-                                <b>Appointment</b> :
-                                <a href="tel:+919727579000">
-                                    +91 97275 79000
-                                </a>
-                            </span>
-                        </div>
-
-                        <p>
-                            Providing specialised cardiac care with accurate
-                            diagnosis, advanced treatment and personalised attention.
+                        <p class="mb-0">
+                            {{ $doctor['specialization'] }}
                         </p>
 
                     </div>
 
-                </div>
 
-            </div>
+                    <!-- Qualification -->
+                    <div
+                        style="
+                            height: 55px;
+                            overflow: hidden;
+                        "
+                    >
 
-
-            <!-- Doctor 2 -->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-
-                <div class="team-box-items mt-0 advance-item h-100">
-
-                    <div class="team-image">
-
-                        <img src="{{ asset('assets/img/home-1/team/doctor-2.png') }}"
-                            alt="Dr. Amit Patel - Orthopaedic Specialist">
-
-                        <span class="post-box">
-                            Orthopaedic Specialist
-                        </span>
-
-                    </div>
-
-                    <div class="team-content">
-
-                        <h3>
-                            <a href="#">Dr. Amit Patel</a>
-                        </h3>
-
-                        <div class="phone-box">
-                            <i class="fas fa-phone-alt"></i>
-
-                            <span>
-                                <b>Appointment</b> :
-                                <a href="tel:+919727579000">
-                                    +91 97275 79000
-                                </a>
-                            </span>
-                        </div>
-
-                        <p>
-                            Focused on comprehensive orthopaedic treatment,
-                            pain management and improved mobility for patients.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Doctor 3 -->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-
-                <div class="team-box-items mt-0 advance-item h-100">
-
-                    <div class="team-image">
-
-                        <img src="{{ asset('assets/img/home-1/team/doctor-3.png') }}"
-                            alt="Dr. Priya Mehta - Gynaecologist">
-
-                        <span class="post-box">
-                            Gynaecologist
-                        </span>
-
-                    </div>
-
-                    <div class="team-content">
-
-                        <h3>
-                            <a href="#">Dr. Priya Mehta</a>
-                        </h3>
-
-                        <div class="phone-box">
-                            <i class="fas fa-phone-alt"></i>
-
-                            <span>
-                                <b>Appointment</b> :
-                                <a href="tel:+919727579000">
-                                    +91 97275 79000
-                                </a>
-                            </span>
-                        </div>
-
-                        <p>
-                            Providing compassionate and personalised healthcare
-                            focused on women's health and overall well-being.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Doctor 4 -->
-            <div class="col-xl-3 col-lg-4 col-md-6">
-
-                <div class="team-box-items mt-0 advance-item h-100">
-
-                    <div class="team-image">
-
-                        <img src="{{ asset('assets/img/home-1/team/doctor-4.png') }}"
-                            alt="Dr. Neha Shah - Paediatrician">
-
-                        <span class="post-box">
-                            Paediatrician
-                        </span>
-
-                    </div>
-
-                    <div class="team-content">
-
-                        <h3>
-                            <a href="#">Dr. Neha Shah</a>
-                        </h3>
-
-                        <div class="phone-box">
-                            <i class="fas fa-phone-alt"></i>
-
-                            <span>
-                                <b>Appointment</b> :
-                                <a href="tel:+919727579000">
-                                    +91 97275 79000
-                                </a>
-                            </span>
-                        </div>
-
-                        <p>
-                            Dedicated to providing attentive, compassionate and
-                            family-focused healthcare for children.
+                        <p class="mb-0">
+                            <strong>
+                                {{ $doctor['qualification'] }}
+                            </strong>
                         </p>
 
                     </div>
@@ -700,11 +611,14 @@
 
         </div>
 
+    @endforeach
+
+</div>
 
         <!-- Button -->
         <div class="team-button text-center mt-5 wow fadeInUp" data-wow-delay=".9s">
 
-            <a href="{{ url('/doctor') }}" class="theme-btn">
+            <a href="{{ url('/doctors') }}" class="theme-btn">
                 <i class="far fa-chevron-right"></i>
                 View All Doctors
             </a>

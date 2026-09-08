@@ -9,7 +9,22 @@ use App\Http\Controllers\Website\FacilityController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('website.index');
+
+    $json = file_get_contents(
+        storage_path('app/doctors.json')
+    );
+
+    $doctors = json_decode($json, true);
+
+    if (json_last_error() !== JSON_ERROR_NONE) {
+        abort(500, 'Invalid doctors.json');
+    }
+
+    // Homepage par sirf 4 doctors
+    $doctors = array_slice($doctors, 0, 4);
+
+    return view('website.index', compact('doctors'));
+
 });
 
 Route::get('/contact', function () {
