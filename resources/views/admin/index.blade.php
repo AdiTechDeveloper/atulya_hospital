@@ -2,10 +2,6 @@
 @section('title', 'Home')
 @section('content')
 
-
-
-
-
 <body>
 
   <!--start header-->

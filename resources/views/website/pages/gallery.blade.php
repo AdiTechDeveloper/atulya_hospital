@@ -67,14 +67,6 @@
                                     </a>
                                 </li>
 
-                                <li>
-                                    <a href="#events">
-                                        <span>Events</span>
-                                        <span class="icon">
-                                            <i class="far fa-long-arrow-right"></i>
-                                        </span>
-                                    </a>
-                                </li>
 
                                 <li>
                                     <a href="#medical-activities">
@@ -91,7 +83,7 @@
 
 
                         <!-- Contact Card -->
-                        <div class="sidebar-widget-image wow fadeInUp"
+                        {{-- <div class="sidebar-widget-image wow fadeInUp"
                             data-wow-delay=".5s">
 
                             <img
@@ -119,7 +111,7 @@
 
                             </div>
 
-                        </div>
+                        </div> --}}
 
                     </div>
 
@@ -159,7 +151,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/44.png') }}"
                                             alt="Hospital"
                                         >
                                     </div>
@@ -169,7 +161,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/55.png') }}"
                                             alt="Hospital"
                                         >
                                     </div>
@@ -179,7 +171,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/66.png') }}"
                                             alt="Hospital"
                                         >
                                     </div>
@@ -205,7 +197,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/11.png') }}"
                                             alt="Infrastructure"
                                         >
                                     </div>
@@ -214,7 +206,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/22.png') }}"
                                             alt="Infrastructure"
                                         >
                                     </div>
@@ -240,7 +232,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/3.png') }}"
                                             alt="ICU"
                                         >
                                     </div>
@@ -249,20 +241,20 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/4.png') }}"
                                             alt="ICU"
                                         >
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                {{-- <div class="col-md-6">
                                     <div class="service-img">
                                         <img
                                             src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
                                             alt="ICU"
                                         >
                                     </div>
-                                </div>
+                                </div> --}}
 
                             </div>
 
@@ -284,7 +276,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/1.png') }}"
                                             alt="Operation Theatre"
                                         >
                                     </div>
@@ -293,7 +285,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/2.png') }}"
                                             alt="Operation Theatre"
                                         >
                                     </div>
@@ -319,7 +311,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/5.png') }}"
                                             alt="Facilities"
                                         >
                                     </div>
@@ -328,7 +320,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/6.png') }}"
                                             alt="Facilities"
                                         >
                                     </div>
@@ -337,7 +329,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/7.png') }}"
                                             alt="Facilities"
                                         >
                                     </div>
@@ -346,7 +338,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/8.png') }}"
                                             alt="Facilities"
                                         >
                                     </div>
@@ -357,32 +349,7 @@
                         </div>
 
 
-                        <!-- =========================
-                            EVENTS
-                        ========================== -->
-
-                        <div id="events" class="gallery-category">
-
-                            <h4>
-                                Events
-                            </h4>
-
-                            <div class="row g-3">
-
-                                <div class="col-md-6">
-                                    <div class="service-img">
-                                        <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
-                                            alt="Events"
-                                        >
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
+                       
                         <!-- =========================
                             MEDICAL ACTIVITIES
                         ========================== -->
@@ -398,7 +365,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/101.png') }}"
                                             alt="Medical Activities"
                                         >
                                     </div>
@@ -407,7 +374,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/102.png') }}"
                                             alt="Medical Activities"
                                         >
                                     </div>
@@ -416,7 +383,7 @@
                                 <div class="col-md-6">
                                     <div class="service-img">
                                         <img
-                                            src="{{ asset('assets/img/inner/service-details/02.jpg') }}"
+                                            src="{{ asset('assets/img/inner/service-details/103.png') }}"
                                             alt="Medical Activities"
                                         >
                                     </div>
