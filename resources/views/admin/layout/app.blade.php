@@ -15,6 +15,7 @@
 
     <!-- Header/Navbar -->
     @include('admin.partials.header')
+    @include('admin.partials.sidebaar')
 
     
     @yield('content')

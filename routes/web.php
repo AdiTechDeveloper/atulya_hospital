@@ -1,14 +1,22 @@
 <?php
 
-// use App\Http\Controllers\Admin\LoginController;
-
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\VideoController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\website\GalleryController;
 use App\Http\Controllers\website\DepartmentController;
 use App\Http\Controllers\Website\FacilityController;
 use Illuminate\Support\Facades\Route;
 
+
+/*
+|--------------------------------------------------------------------------
+| Website Routes
+|--------------------------------------------------------------------------
+*/
+
+
+// Home
 Route::get('/', function () {
 
     $json = file_get_contents(
@@ -26,63 +34,135 @@ Route::get('/', function () {
 
     return view('website.index', compact('doctors'));
 
-});
+})->name('home');
 
-Route::get('/contact', function () {
-    return view('website.pages.contact');
-});
 
+// About
 Route::get('/about', function () {
     return view('website.pages.about');
-});
+})->name('about');
 
-Route::get('/gallery', function () {
-    return view('website.pages.gallery');
-});
 
+// Contact
+Route::get('/contact', function () {
+    return view('website.pages.contact');
+})->name('contact');
+
+
+// Gallery
+Route::get('/gallery', [GalleryController::class, 'index'])
+    ->name('gallery.index');
+
+
+// ICU
 Route::get('/icu', function () {
     return view('website.pages.icu');
-});
+})->name('icu');
 
-Route::get('/departments/{slug}', [DepartmentController::class, 'show']);
-Route::get('/facilities/{slug}', [FacilityController::class, 'show']);
-Route::get('/departments',function () {
+
+// Departments
+Route::get('/departments', function () {
     return view('website.pages.show');
-});
-// Route::get('/doctor', function () {
-//     return view('website.pages.ourdoctor');
-// });
+})->name('departments.index');
 
+Route::get('/departments/{slug}', [DepartmentController::class, 'show'])
+    ->name('departments.show');
+
+
+// Facilities
+Route::get('/facilities/{slug}', [FacilityController::class, 'show'])
+    ->name('facilities.show');
+
+
+// Blog
 Route::get('/blog', function () {
     return view('website.pages.blog');
-});
+})->name('blog');
 
 
-Route::get('/admin/login', [AuthController::class, 'showLogin'])
-    ->middleware('guest');
-
-Route::post('/admin/login', [AuthController::class, 'login'])
-    ->middleware('guest');
-
-Route::get('/admin/dashboard', function () {
-    return view('admin.index');
-})->middleware('auth');
-
-Route::post('/admin/logout', [AuthController::class, 'logout'])
-    ->middleware('auth');
-
-
-    Route::fallback(function () {
-    return redirect('/');
-});
-
-
-
+// Doctors
 Route::get('/doctors', [DoctorController::class, 'index'])
     ->name('doctors.index');
 
 Route::get('/doctors/{slug}', [DoctorController::class, 'show'])
     ->name('doctors.show');
 
-    Route::get('/gallery', [GalleryController::class, 'index'])
-    ->name('gallery.index');
+
+
+/*
+|--------------------------------------------------------------------------
+| Admin Authentication Routes
+|--------------------------------------------------------------------------
+*/
+
+
+// Admin Login Page
+Route::get('/admin/login', [AuthController::class, 'showLogin'])
+    ->middleware('guest')
+    ->name('admin.login');
+
+
+// Admin Login
+Route::post('/admin/login', [AuthController::class, 'login'])
+    ->middleware('guest')
+    ->name('admin.login.submit');
+
+
+// Admin Logout
+Route::post('/admin/logout', [AuthController::class, 'logout'])
+    ->middleware('auth')
+    ->name('admin.logout');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Admin Protected Routes
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware('auth')
+    ->prefix('admin')
+    ->group(function () {
+
+        // Dashboard
+        Route::get('/dashboard', function () {
+            return view('admin.index');
+        })->name('admin.dashboard');
+
+
+        // Videos CRUD
+        Route::get('/videos', [VideoController::class, 'index'])
+            ->name('admin.videos.index');
+
+        Route::get('/videos/create', [VideoController::class, 'create'])
+            ->name('admin.videos.create');
+
+        Route::post('/videos', [VideoController::class, 'store'])
+            ->name('admin.videos.store');
+
+        Route::get('/videos/{video}/edit', [VideoController::class, 'edit'])
+            ->name('admin.videos.edit');
+
+        Route::put('/videos/{video}', [VideoController::class, 'update'])
+            ->name('admin.videos.update');
+
+        Route::delete('/videos/{video}', [VideoController::class, 'destroy'])
+            ->name('admin.videos.destroy');
+
+        Route::patch('/videos/{video}/status', [VideoController::class, 'toggleStatus'])
+            ->name('admin.videos.status');
+
+    });
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Fallback Route
+|--------------------------------------------------------------------------
+*/
+
+Route::fallback(function () {
+    return redirect('/');
+});
